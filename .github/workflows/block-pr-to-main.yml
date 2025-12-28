@@ -1,0 +1,14 @@
+name: block-pr-to-main
+
+on:
+  pull_request:
+    branches: [ "main" ]   # runs only when PR base is main
+
+jobs:
+  block:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Block PRs targeting main
+        run: |
+          echo "PRs to main are not allowed. Use develop (or another branch) instead."
+          exit 1
