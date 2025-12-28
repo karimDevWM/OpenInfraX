@@ -1,0 +1,52 @@
+services:
+  postgres_users:
+    image: postgres:16
+    container_name: postgres_users
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      POSTGRES_DB: ${APP1_DB}
+      POSTGRES_USER: ${APP1_USER}
+      POSTGRES_PASSWORD: ${APP1_PASSWORD}
+    ports:
+      - "5431:5432"
+    volumes:
+      - pgdata_users:/var/lib/postgresql/data
+    networks:
+      - openInfraX_network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${APP1_USER} -d ${APP1_DB}"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+  
+  postgres_projects:
+    image: postgres:16
+    container_name: postgres_projects
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      POSTGRES_DB: ${APP2_DB}
+      POSTGRES_USER: ${APP2_USER}
+      POSTGRES_PASSWORD: ${APP2_PASSWORD}
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata_projects:/var/lib/postgresql/data
+    networks:
+      - openInfraX_network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${APP2_USER} -d ${APP2_DB}"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+volumes:
+  pgdata_users:
+  pgdata_projects:
+
+networks:
+  openInfraX_network:
+    driver: bridge
