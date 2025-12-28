@@ -10,13 +10,3 @@ curl -fsSL https://get.jetify.com/devbox | bash
     git clone https://github.com/karimDevWM/OpenInfraX.git;cd OpenInfrax
 # III) Run this command
     devbox shell
-
-<!-- # To create a local Angular project in the OpenInfraX project :
-pnpm exec ng new frontend --routing --style=scss
-# check local angular version
-pnpm exec ng version
-
-# To create Nestjs project in the OpenInfraX project :
-pnpm exec nest new backend
-# check local Nestjs version
-pnpm exec nest --version -->
