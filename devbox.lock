@@ -1,0 +1,134 @@
+{
+  "lockfile_version": "1",
+  "packages": {
+    "docker_29": {
+      "resolved": "github:NixOS/nixpkgs/c633f572eded8c4f3c75b8010129854ed404a6ce#docker_29",
+      "source": "nixpkg",
+      "systems": {
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "path": "/nix/store/a8gb487kzlvhpikn6c6kc2qhns75mxr7-docker-29.1.3",
+              "default": true
+            }
+          ]
+        }
+      }
+    },
+    "github:NixOS/nixpkgs/nixpkgs-unstable": {
+      "last_modified": "2025-12-27T12:56:01Z",
+      "resolved": "github:NixOS/nixpkgs/3edc4a30ed3903fdf6f90c837f961fa6b49582d1?lastModified=1766840161"
+    },
+    "nodejs_20@latest": {
+      "last_modified": "2025-12-18T02:44:17Z",
+      "plugin_version": "0.0.2",
+      "resolved": "github:NixOS/nixpkgs/def3da69945bbe338c373fddad5a1bb49cf199ce#nodejs_20",
+      "source": "devbox-search",
+      "version": "20.19.6",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/2kjd2hdrq0jwvp1bsprkc1l43igxklza-nodejs-20.19.6",
+              "default": true
+            },
+            {
+              "name": "dev",
+              "path": "/nix/store/mps5aig52xhlzf5mfk8xgghpf9gwhn5y-nodejs-20.19.6-dev"
+            },
+            {
+              "name": "libv8",
+              "path": "/nix/store/k5kssw3cbqz4npj2mvr30nis2qa7lcnb-nodejs-20.19.6-libv8"
+            }
+          ],
+          "store_path": "/nix/store/2kjd2hdrq0jwvp1bsprkc1l43igxklza-nodejs-20.19.6"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/7brhmf1z6sygq1ag0d0y802m2la9fv6w-nodejs-20.19.6",
+              "default": true
+            },
+            {
+              "name": "dev",
+              "path": "/nix/store/884d8xk6fg8d3wsrjpa2h0kprvvjyrrr-nodejs-20.19.6-dev"
+            },
+            {
+              "name": "libv8",
+              "path": "/nix/store/m918hzjk216sqisk9iwfxcyxikf6522i-nodejs-20.19.6-libv8"
+            }
+          ],
+          "store_path": "/nix/store/7brhmf1z6sygq1ag0d0y802m2la9fv6w-nodejs-20.19.6"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/d3npj4fvi6d3kxq0dapxhl7shkcpg3cy-nodejs-20.19.6",
+              "default": true
+            },
+            {
+              "name": "dev",
+              "path": "/nix/store/rga3fj4ps16krc71x74s5aq07wblw29x-nodejs-20.19.6-dev"
+            },
+            {
+              "name": "libv8",
+              "path": "/nix/store/xdk7gvvv1zysmzzjz2725iqgm9bkj3ks-nodejs-20.19.6-libv8"
+            }
+          ],
+          "store_path": "/nix/store/d3npj4fvi6d3kxq0dapxhl7shkcpg3cy-nodejs-20.19.6"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/801vxv443kws1y38y858znrir51wd3l4-nodejs-20.19.6",
+              "default": true
+            },
+            {
+              "name": "dev",
+              "path": "/nix/store/9jqb0gl4pc9zkry3xdqv4pqrbqjr46wc-nodejs-20.19.6-dev"
+            },
+            {
+              "name": "libv8",
+              "path": "/nix/store/1gfrzyw9p99jvxwdzcvss6wn5fbj8k69-nodejs-20.19.6-libv8"
+            }
+          ],
+          "store_path": "/nix/store/801vxv443kws1y38y858znrir51wd3l4-nodejs-20.19.6"
+        }
+      }
+    },
+    "pnpm_10": {
+      "resolved": "github:NixOS/nixpkgs/c633f572eded8c4f3c75b8010129854ed404a6ce#pnpm_10",
+      "source": "nixpkg",
+      "systems": {
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "path": "/nix/store/n0vnbv38pdwsknmsfalp57yw1jjrcsv3-pnpm-10.26.1",
+              "default": true
+            }
+          ]
+        }
+      }
+    },
+    "solc_0_8@latest": {
+      "last_modified": "2021-05-07T13:48:33Z",
+      "resolved": "github:NixOS/nixpkgs/316b82563a7793a4a88bed9e41adb936d9adc969#solc_0_8",
+      "source": "devbox-search",
+      "version": "0.8.2",
+      "systems": {
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "path": "/nix/store/2pjd2s5wgy41ghfk24ab69kpzvv5n1bd-solc-0.8.2",
+              "default": true
+            }
+          ]
+        }
+      }
+    }
+  }
+}
