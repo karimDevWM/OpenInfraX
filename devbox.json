@@ -1,15 +1,27 @@
 {
-    "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.16.0/.schema/devbox.schema.json",
-    "packages": [],
-    "shell": {
-      "init_hook": [
-        "echo 'Welcome to devbox!' > /dev/null"
-      ],
-      "scripts": {
-        "test": [
-          "echo \"Error: no test specified\" && exit 1"
-        ]
-      }
+  "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.16.0/.schema/devbox.schema.json",
+  "packages": [
+    "nodejs_20@latest",
+    "pnpm_10",
+    "docker_29",
+    "solc_0_8@latest"
+  ],
+  "shell": {
+    "init_hook": [
+      "echo 'Welcome to devbox!' > /dev/null",
+      "echo 'Restarting docker compose for OpenInfraX...'",
+      "docker info >/dev/null 2>&1 || { echo 'Docker daemon is not running'; exit 1; }",
+      "docker compose up --build -d"
+    ],
+    "scripts": {
+      "install":  "pnpm install",
+      "angular":  "pnpm exec ng",
+      "nest":     "pnpm exec nest",
+      "frontend": "cd frontend && pnpm exec ng serve",
+      "backend":  "cd backend && pnpm exec nest start --watch",
+      "test": [
+        "echo \"Error: no test specified\" && exit 1"
+      ]
     }
   }
-  
+}
