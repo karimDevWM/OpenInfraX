@@ -5,7 +5,6 @@
     wsl --status
 ## 2) even if you have already a current wsl session, create another
     wsl --install -d Ubuntu --name "enter your user session name"
-
 curl -fsSL https://get.jetify.com/devbox | bash
 # II) Clone the project and enter into it
     git clone https://github.com/karimDevWM/OpenInfraX.git;cd OpenInfrax
