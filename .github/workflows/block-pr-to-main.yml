@@ -1,4 +1,4 @@
-name: block-pr-to-main
+name: Block-pr-to-main
 
 on:
   pull_request:
