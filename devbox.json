@@ -11,14 +11,16 @@
       "echo 'Welcome to devbox!' > /dev/null",
       "echo 'Restarting docker compose for OpenInfraX...'",
       "docker info >/dev/null 2>&1 || { echo 'Docker daemon is not running'; exit 1; }",
-      "docker compose up --build -d"
+      "docker compose up --build -d",
+      "trap 'echo \"Stopping docker containers...\"; docker compose down' EXIT"
     ],
     "scripts": {
       "install":  "pnpm install",
       "angular":  "pnpm exec ng",
       "nest":     "pnpm exec nest",
-      "frontend": "cd frontend && pnpm exec ng serve",
-      "backend":  "cd backend && pnpm exec nest start --watch",
+      "webapp": "pnpm exec ng new webapp --routing --style=scss",
+      "users":  "cd users && pnpm exec nest start --watch && echo 'Welcome to users project!' > /dev/null",
+      "projects":  "cd projects && pnpm exec nest start --watch && echo 'Welcome to projects project !' > /dev/null",
       "test": [
         "echo \"Error: no test specified\" && exit 1"
       ]

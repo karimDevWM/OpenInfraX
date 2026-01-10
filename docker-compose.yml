@@ -43,6 +43,55 @@ services:
       timeout: 3s
       retries: 20
 
+  users:
+    build: ./users
+    container_name: users_app
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      PORT: 3000
+      DB_HOST: postgres_users
+      DB_PORT: 5432
+      DB_NAME: ${APP1_DB}
+      DB_USER: ${APP1_USER}
+      DB_PASSWORD: ${APP1_PASSWORD}
+    ports:
+      - "3001:3000"
+    depends_on:
+      - postgres_users
+    networks:
+      - openInfraX_network
+
+  projects:
+    build: ./projects
+    container_name: projects_app
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      PORT: 3000
+      DB_HOST: postgres_projects
+      DB_PORT: 5432
+      DB_NAME: ${APP2_DB}
+      DB_USER: ${APP2_USER}
+      DB_PASSWORD: ${APP2_PASSWORD}
+    ports:
+      - "3002:3000"
+    depends_on:
+      - postgres_projects
+    networks:
+      - openInfraX_network
+
+  webapp:
+    build: ./webapp
+    container_name: webapp
+    restart: unless-stopped
+    ports:
+      - "4200:80"
+    networks:
+      - openInfraX_network
+
 volumes:
   pgdata_users:
   pgdata_projects:
