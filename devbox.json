@@ -8,6 +8,7 @@
   ],
   "shell": {
     "init_hook": [
+      "pnpm install",
       "echo 'Welcome to devbox!' > /dev/null",
       "echo 'Restarting docker compose for OpenInfraX...'",
       "docker info >/dev/null 2>&1 || { echo 'Docker daemon is not running'; exit 1; }",
